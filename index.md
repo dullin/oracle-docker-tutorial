@@ -34,6 +34,7 @@ Cela va installer et configurer la base de données sur votre système.
 Il faut faire une première connexion avec le compte `system` pour se créer un utilisateur normal pour notre base de données.
 
 Ouvrez SQL Developer et faite une nouvelle connexion.
+
 ![](sql-connect.png)
 
 Entrez les informations suivantes :
