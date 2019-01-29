@@ -1,3 +1,5 @@
+[Playlist Youtube pour l'instllation](https://www.youtube.com/playlist?list=PLliSmgNDYPxyO0qZ0yefbOHA5TbhDMOkj)
+
 # Installation de Docker
 
 Vous pouvez suivre la documentation d'installation en anglais au [lien suivant](https://docs.docker.com/docker-for-mac/install/).
