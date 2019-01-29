@@ -4,13 +4,13 @@
 
 Vous pouvez suivre la documentation d'installation en anglais au [lien suivant](https://docs.docker.com/docker-for-mac/install/).
 
-Télécharger Docker du [lien suivant](https://download.docker.com/mac/stable/Docker.dmg) et installer là dans votre dossier d'application.
+Téléchargez l'application Docker du [lien suivant](https://download.docker.com/mac/stable/Docker.dmg) et installez là dans votre dossier d'application.
 
-À sa première exécution, docker va vous demander d'installer ses outils.
+À sa première exécution, docker va demander d'installer ses outils. Votre mot de passe d'administrateur sera nécéssaire.
 
 ![](whale-in-menu-bar.png)
 
-Docker est prêt-à être utiliser quand son icône n'est plus animer, vous pouvez aussi regarder son étant en cliquant sur l'icône.
+Docker est prêt quand son icône n'est plus animé, vous pouvez aussi regarder son état en cliquant sur l'icône.
 
 ![](docker-running.png)
 
@@ -18,7 +18,7 @@ Docker est prêt-à être utiliser quand son icône n'est plus animer, vous pouv
 
 SQL Developer est disponible au [lien suivant](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html).
 
-Faire attention, la version de java JDK8 d'oracle doit être installée avant de pouvoir utiliser SQL Developer. Ci ce n'est pas déjà installé, vous pouvez vous le procurer [sur le site d'Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Faire attention, la version de java JDK8 d'Oracle doit être installée avant de pouvoir utiliser SQL Developer. Ci ce n'est pas déjà installé, vous pouvez vous le procurer [sur le site d'Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Une fois téléchargé, copiez l'application dans votre dossier d'Application.
 
@@ -31,11 +31,11 @@ docker run --name oracle11g -d -p 1521:1521 wnameless/oracle-xe-11g
 
 Cela va installer et configurer la base de données sur votre système.
 
-# Connexion et création d'utilisateurs avec SQL Developer
+# Connexion et création d'un utilisateur avec SQL Developer
 
-Il faut faire une première connexion avec le compte `system` pour se créer un utilisateur normal pour notre base de données.
+Il faut faire une première connexion avec le compte `system` pour se créer un utilisateur normal sur notre base de données.
 
-Ouvrez SQL Developer et faite une nouvelle connexion.
+Ouvrez SQL Developer et créez une nouvelle connexion.
 
 ![](sql-connect.png)
 
@@ -63,7 +63,7 @@ Où le `nomUsager` et `monMotDePasse` est de votre propre crue.
 
 ![](create-user.png)
 
-On exécute le script en cliquant sur le bouton `Run script` ou en pesant sur F5.
+Exécutez le script en cliquant sur le bouton `Run script` ou pesez sur F5.
 
 Si tout a bien été, la fenêtre d'affichage de script nous indique que le compte est créé et que les accès sont accordés.
 
@@ -71,21 +71,21 @@ Si tout a bien été, la fenêtre d'affichage de script nous indique que le comp
 
 Avec la création de notre compte, nous allons modifier les informations d'accès pour nous connecter à partir de notre compte à l'instar du compte system.
 
-Avec un clic droit sur le serveur, on peut changer les `properties` qui nous ramène aux informations de connexions. Nous allons changer les informations pour le nouveau compte créé.
+Avec un clic droit sur le serveur, changez les `properties` qui nous ramène aux informations de connexions. Nous allons changer les informations pour le nouveau compte créé.
 
 ![](new-user.png)
 
 Avec cela, nous pouvons nous connecter et utiliser la base de données sur macOS.
 
-# Fermeture et reouverture de la base de données
-Vous pouvez quitter docker à partir de la barre de menu pour fermer la base de données quand elle n'est pas utilisée.
+# Fermeture et réouverture de la base de données
+Vous pouvez quitter Docker à partir de la barre de menu pour fermer la base de données quand elle n'est pas utilisée.
 
-Pour repartir la base de données, il faut:
+Pour repartir la base de données :
 
-* Repartir l'application Docker et attendre qu'elle soit initialisée (pas d'animation dans l'icône)
-* Ouvrir le terminal et taper la commande suivante :
+* Relancer l'application Docker et attendre qu'elle soit initialisée (pas d'animation dans l'icône)
+* Ouvrir le terminal et tapez la commande suivante :
 ```
 docker start oracle11g
 ```
 
-Cela va repartir la base de données et vous pourrez vous connecter à celle-ci à partir de SQL Developer.
+La base de données sera prête pour utilisation et vous pourrez vous connecter à celle-ci à partir de SQL Developer.
